@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Brain tumor classification using cnn</title>
+		<link rel="icon" href="images/logoweb.jpg" type="image/x-icon">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">home</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="project list.html">projects</a></li>
+								<li><a href="about me.html">about me</a></li>
+								<!-- <li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>-->
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Brain tumor classification using cnn</h2>
+								<p><a href="#" class="special" onclick="window.scrollBy(0, window.innerHeight/2); return false;">explore</a></p>
+								<p>Go to the Notebook.<a href="https://github.com/vic-k-y/machine-learning/blob/main/Brain%20tumor%20classification%20-%20CNN.ipynb" target="_blank"> CLICK HERE</a></p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h2 class="major">About project and objective:</h2>
+									<p>The Objective of this study is to Classify the kind of tumor present in the brain using the MRI images took from the patients. 
+										For this image classification I am using different models in CNN architectures. By this study classifing the tumor 
+										in brain becomes lot easier without the human intervention. The future scope of this study may go to monitoring the
+										 tumor size for specific patient and anaysing the medicines impact whether its working or Not, is it slowing the tumor 
+										 cells growth or not. By models like this Implementing in medical field improves the overall health of the humans significantly..</p>
+
+									<h2 class="major"></h2>
+									<h2>dataset description:</h2>
+									<p>This Dataset contains images of MRI scans of 3 different types of Brain tumors and images of no brain tumor. Totally 
+										3264 images containing three different classes of tumors stated as glioma tumor, meningioma tumor, 
+										pituitary tumor. And labelled classes in images follows.</p>
+
+									<p>Labelled Classes of images:</p>
+									<ul>
+										<li>Glioma tumor</li>
+										<li>Meningioma tumor</li>
+										<li>Pituitary tumor</li>
+										<li>No tumor</li>
+									</ul>
+									<h2 class="major"></h2>
+									<h2>short note about all tumors:</h2>
+									<article>
+										<h3>glioma tumor</h3>
+										<p>glioma is a tumor that forms in the brain or spinal cord. There are several types, 
+											including astrocytomas, ependymomas and oligodendrogliomas. Gliomas can affect children 
+											or adults. Some grow very quickly. Most people with gliomas need a combination of 
+											treatments such as surgery, radiation therapy and chemotherapy.</p>
+									</article>
+									<article>
+										<h2 class="major"></h2>
+										<h3>meningioma tumor</h3>
+										<p>A meningioma is a tumor that arises from the meninges — the membranes 
+											that surround the brain and spinal cord. Although not technically a brain tumor, 
+											it is included in this category because it may compress or squeeze the adjacent brain, 
+											nerves and vessels. Meningioma is the most common type of tumor that forms in the head.</p>
+									</article>
+									<article>
+										<h2 class="major"></h2>
+										<h3>pituitary tumor</h3>
+										<p>Pituitary tumors are abnormal growths that develop in your pituitary gland. Some pituitary 
+											tumors result in too much of the hormones that regulate important functions of your body. Some 
+											pituitary tumors can cause your pituitary gland to produce lower levels of hormones.
+											</p>
+									</article>
+									<h2 class="major"></h2>
+									<h2>image splitting and image augumentation:</h2>
+									<P>out of 3264 images, 2870 images are used for training purpose of models. from 2870 images took for 
+										training, again 574 images are used as validation of the models.</P>
+									<p>the images are standardly scaled in 256/256 pixels. to avoid overfitting and work best towards 
+										unseen image, image augumentation is done. the images are randomly fliped horizontally and vertically 
+										then they are randomly rotated sideways.</p>
+									<h4 class="image-title">Sample images</h4>
+									<img src="images/brain image.png" width="1000" height="500" align="center">
+
+									<h2 class="major"></h2>
+									<h3>model 1:</h3>
+									<p>In first model i have built an architecture that i have seen on online and experimented with it, this contains 
+										sequencial layers of 2 con2D layers with kernal size of 3,3 and maxpooling layer below each. After that flatten 
+										is used to flatout. Now 3 dense layer of 32, 16, 8 consecutively, with "relu" activation layer. lastly the final 
+										layer of "softmax" for output. the adam optimiser is used for optimisation of the accuracy metric. And used 'reducedLRonplateau' to reduce the laering 
+										rate when there is no improvement in validation loss.</p>
+									<h4 class="image-title">Model Summary</h4>
+									<img src="images/model 1.jpeg" width="700" height="500" align="center">
+									<h4>results:</h4>
+									<li>Accuracy on the train images: 91.68%</li>
+									<li>Accuracy on validation images: 87.11%</li>
+									<p>Using this model to predict test image i got 232 images correctly classified, 
+										162 wrongly classified out of 394 total images.</p>
+									<h2 class="major"></h2>
+									<h3>model 2:</h3>
+									<p>EfficientnetB0 is what used to build 2nd model. This function has Keras image classification model, optionally 
+										loaded with weights pre-trained on ImageNet. i chose this because seen online some people using this pre trained 
+										model to work with this image data and gave good results too.After efficientnetV2B0 in the sequence, used 
+										GlobalAveragepooling, dropout of 0.5, dense layer of 8 nodes with "relu", and finally dense layer with the 
+										softmax layer of 4 classes. here also,the adam optimiser is used for optimisation of the accuracy metric. And used 'reducedLRonplateau' to reduce the laering 
+										rate when there is no improvement in validation loss. in addition to that early stop also used to maintain lower loss.</p>
+									<h4 class="image-title">Model Summary</h4>
+									<img src="images/model 2.jpeg" width="500" height="350" align="center">
+									<h4>results:</h4>
+									<li>Accuracy on the train images: 99.96%</li>
+									<li>Accuracy on validation images: 97.04%</li>
+									<p>Using this model to predict test image i got 303 images correctly classified, 
+										91 wrongly classified out of 394 total images.</p>
+									<h2 class="major"></h2>
+									<h3>model 3:</h3>
+									<p>After seen the results of EfficientnetB0 i am soo curious to try the other EfficientNet versions so i went with 
+										EfficientNet version 2 B0. This also weights pre-trained on ImageNet and also with bigger size. In the sequence 
+										after efficientnetV2B0 used GlobalAveragepooling, dropout of 0.5, dense layer of 8 nodes with "relu", and finally 
+										the softmax layer of no of classes.here also,the adam optimiser is used for optimisation of the accuracy metric. And used 'reducedLRonplateau' to reduce the laering 
+										rate when there is no improvement in validation loss. in addition to that early stop also used to maintain lower loss.</p>
+									<h4 class="image-title">Model Summary</h4>
+									<img src="images/model 3.jpeg" width="500" height="350" align="center">
+									<h4>results:</h4>
+									<li>Accuracy on the train images: 99.52%</li>
+									<li>Accuracy on validation images: 96.17%</li>
+									<p>Using this model to predict test image i got 283 images correctly classified, 111 wrongly classified out of 394 total 
+										images. less than the Efficientnet Version 1.</p>
+
+									
+									<h4 class="major"></h4>
+									<h2>applying test set images:</h2>
+									<li>Model 1 predicted</li>
+									<p>232 images correct and 162 incorrect out of 394.</p>
+									<li>With model 2 got upto</li>
+									<p>303 images correct and 91 incorrect out of 394.</p>
+									<li>On model 3</li>
+									<p>283 images correct and 111 incorrect out of 394.</p>
+									<h1 class="major"></h1>
+
+									
+									<h2>Recommended model:</h2>
+										<p>Second model, EfficientNetB0 model gives better Accuracy and cross val accuracy score. So for now second model bestfits 
+											for this image data. And also while running the test image set on the second "efficientnetB0" model provides precise 
+											classification much better then any other two models, correctly classifies upto 303 classes out of 394 better then other 
+											232 and 283. Since classification is the main objective i choose this second model as successor.</p>
+									<h2 class="major"></h2>
+									<h2>Insights:</h2>
+										<p>while testing the models, all of them have some difficulties to classify between "no tumor" and "Glioma tumor" and 
+											"pituitary tumor" this may be because of the location of the tumor in the brain.
+											
+											In further, as always more images will help to get more accurate classification. And exploring the pre trained models 
+											more will improve results in long run.
+											
+											since building own model requires more trail and error, it also not an Bad option.</p>
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<ul class="contact">
+								<li class="icon solid fa-phone">+91-8680896912</li>
+								<li class="icon solid fa-envelope"><a href="mailto:vignesh_m20@outlook.com">vignesh_m20@outlook.com</a></li>
+								<!--<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>-->
+								<li class="icon brands fa-linkedin"><a href="https://in.linkedin.com/in/vignesh-m20">linkedin.com/in/vignesh-m20</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; All rights reserved.</li><li>Designed by me!</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
