@@ -1,0 +1,71 @@
+
+.article {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.article:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.article .image:hover {
+    opacity: 0.9;
+}
+
+.article .special:hover {
+    color: rgb(72, 250, 63);
+}
+.innner_code {
+    background-color: #339f2f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: monospace;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.wrapper_code {
+    background-color: #172449;
+
+    padding: 18%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+#write  css code for wrapper to place it centre and width 90%
+
+
+/*
+.inner {
+    background-color: hwb(233 5% 77%);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 1000px;
+}
+
+
+
+
+/*.wrapper {
+    background-color: #544cc0;
+    padding: 1px;
+    border-radius: 1px;
+    margin-bottom: 1px;
+}
+/*.article:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+
+}*/
+
+/*.article:hover {
+    transform: scale(1.1);
+}*/
+
+/*.article:hover {
+    transform: scale(1.05);
+    transform: translateY(-10px);
+    z-index: 1;
+    background-color: #2b3a7c;
+}*/
