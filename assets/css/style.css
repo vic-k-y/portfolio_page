@@ -10,7 +10,7 @@
 }
 
 
-.article .image:hover {
+.article_code .image:hover {
     opacity: 0.9;
 }
 
@@ -57,6 +57,23 @@
 .wrapper_code .article_code:last-child {
     margin-bottom: 0;
 }
+
+uls.contact {
+    list-style-type: none;
+    padding: 10;
+    margin: 10;
+    height: 100%;
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Wrap the items to a new line if they exceed the container width */
+    justify-content: space-between; /* Evenly distribute the items between the container */
+  }
+  
+  uls.contact li {
+    flex: 0 0 auto; /* Prevent the items from growing or shrinking */
+    margin-right: 20px; /* Add spacing between the items */
+  }
+  
+
 /*
 .wrapper_code {
     background-color: #172449;
