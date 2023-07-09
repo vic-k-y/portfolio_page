@@ -1,4 +1,4 @@
-function smoothScroll(event) {
+function smoothScroll(event,val,vals) {
     event.preventDefault();
   
     const target = document.documentElement;
@@ -6,7 +6,7 @@ function smoothScroll(event) {
     const windowHeight = window.innerHeight;
   
     const scrollOptions = {
-      top: scrollHeight / 3 - windowHeight / 3,
+      top: scrollHeight / val - windowHeight / vals,
       behavior: 'smooth'
     };
   
