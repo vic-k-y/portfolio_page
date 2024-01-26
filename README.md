@@ -2,9 +2,4 @@
 
 A Webpage to showcase my personal projects
 
-new words main branch
-
-new words
-
-first branch
 
