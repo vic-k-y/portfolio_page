@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="images/logoweb.png" type="image/ico">
-		<title>My Projects - Vignesh's Portfolio</title>
+		<title>ImagTo - Vignesh's Portfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/style.css">
@@ -41,34 +41,17 @@
 						</header>
 							<div class="wrapper">
 								<div class="inner">
-									<h1 class="major" style="text-align: center;">Projects categories</h1>
+									<!--<h1 class="major" style="text-align: center;">Projects categories</h1>-->
 									<section class="features">
-										<article class="article_code">
-											<a href="ml.html" class="image"><img src="images/ml.jpg" /></a>
-											<a href="ml.html"><h3 class="major">Machine Learning Projects</h3> </a>
-										
-											<a href="ml.html"><p href="ml.html">Machine learning projects like Regression, Classification and Deep learning for image classification.</p></a>
-											<!--<a href="ml.html" class="special" alt="_blank">Learn more</a>-->
-										</article>
-										<article class="article_code">
-											<a href="da.html" class="image"><img src="images/illustration-of-data-analysis-graph-vector.jpg" alt="" /></a>
-											<a href="da.html"><h3 class="major">Data Anaysis Projects</h3></a>
-											<a href="da.html"><p>Data analysis projects like Energy drink marketing Insights. Using Tools like Power BI, tableau and Python.</p> </a>
-											<!--<a href="Brain tumor classification.html" class="special">Learn more</a>-->
-										</article>
-										<article class="article_code">
-											<a href="imagto.html" class="image"><img src="images/Stable-Diffusion.webp" alt="" /></a>
-											<a href="imagto.html"><h3 class="major">ImagTo</h3></a>
-											<a href="imagto.html"><p>Text-To-Image generation, Stable diffusion image model.</p> </a>
-										</article>
+										<gradio-app src="https://vickyji-imagto.hf.space"></gradio-app>
 									</section>
 								</div>
 							</div>
 							<div class="wrapper">
 								<div class="inner">
 									<h3 class="major"></h3>
-									<h2><a href="https://github.com/vic-k-y/" target="_blank" class="special">click here to see Github repo.</a></h2>
-									
+									<h2><a href="https://github.com/vic-k-y/ImagTo" target="_blank" class="special">click here to see Github repo.</a></h2>
+									<h2><a href="https://imagto.azurewebsites.net/" target="_blank" class="special">Another link to try this app.</a></h2>
 								</div>
 							</div>
 
@@ -97,6 +80,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script
+				type="module"
+				src="https://gradio.s3-us-west-2.amazonaws.com/3.44.4/gradio.js"
+			></script>
 	</body>
 </html>
